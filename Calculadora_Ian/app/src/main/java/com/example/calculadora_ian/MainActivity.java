@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         Log.i("LifeCycle","onPause");
-        Button b = findViewById(R.id.buttonHola);
+        //Button b = findViewById(R.id.buttonHola);
 
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        //b.setOnClickListener(new View.OnClickListener() {
+            //@Override
+            //public void onClick(View v) {
 
-            }
-        });
+            //}
+        //});
     }
     @Override
     protected void onStart(){
