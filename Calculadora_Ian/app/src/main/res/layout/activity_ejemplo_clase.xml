@@ -23,9 +23,19 @@
         android:name="com.example.calculadora_ian.TextFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/fragmentContainerView"
         tools:layout="@layout/fragment_text" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ImageF_ContainerView"
+        android:name="com.example.calculadora_ian.ImageFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_image" />
 </androidx.constraintlayout.widget.ConstraintLayout>

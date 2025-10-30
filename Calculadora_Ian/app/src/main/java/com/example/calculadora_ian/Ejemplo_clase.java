@@ -16,8 +16,25 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentActivity;
 
-public class Ejemplo_clase extends FragmentActivity implements ToolbarFragment.ToolbarListener{
+public class Ejemplo_clase extends FragmentActivity implements ToolbarFragment.ToolbarFragmentListener{
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_ejemplo_clase);
+    }
+
+    @Override
+    public void onButtonClick(int value) {
+        ImageFragment image_fragment = (ImageFragment) getSupportFragmentManager().findFragmentById(R.id.ImageF_ContainerView);
+
+        if (image_fragment != null)
+            image_fragment.ChangeImageAlpha(value);
+    }
+
+
+    }
+    /*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +46,7 @@ public class Ejemplo_clase extends FragmentActivity implements ToolbarFragment.T
             return insets;
         });
 
-       /* Button b = findViewById(R.id.button);
+      Button b = findViewById(R.id.button);
 
         TextView t3 = findViewById(R.id.textView3);
 
@@ -55,7 +72,7 @@ public class Ejemplo_clase extends FragmentActivity implements ToolbarFragment.T
                 return true;
             }
         });
-*/
+
 
 
     }
@@ -68,6 +85,8 @@ public class Ejemplo_clase extends FragmentActivity implements ToolbarFragment.T
             textFragment.ChangeTextProperties(size, text);
         }
     }
+    */
+
 
 
     /*
@@ -122,4 +141,4 @@ public class Ejemplo_clase extends FragmentActivity implements ToolbarFragment.T
 
 
         }*/
-    }
+
