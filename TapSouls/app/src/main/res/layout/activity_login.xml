@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/b"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/textViewBienvenido"
+        android:layout_width="260dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/bentham"
+        android:text="Bienvenido a TapSouls"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewI"
+        android:layout_width="187dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/bentham"
+        android:text="Inicia Sesión"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBienvenido" />
+
+    <TextView
+        android:id="@+id/textViewN"
+        android:layout_width="152dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="187dp"
+        android:fontFamily="@font/bentham"
+        android:text="Nombre:"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewI" />
+
+    <TextView
+        android:id="@+id/textViewC"
+        android:layout_width="151dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="187dp"
+        android:fontFamily="@font/bentham"
+        android:text="Contraseña:"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewN" />
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="295dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="43dp"
+        android:hint="Nombre de usuario"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewN" />
+
+    <EditText
+        android:id="@+id/editTextContrasena"
+        android:layout_width="295dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="43dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewC" />
+
+    <Button
+        android:id="@+id/buttonInicioSesion"
+        android:layout_width="217dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="49dp"
+        android:text="Inicia Sesion"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextContrasena"
+        android:background="#FF0000"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
