@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         imageViewStart = findViewById(R.id.imageViewStart);
         editTextNombre = findViewById(R.id.editTextNombre);
         editTextContrasena = findViewById(R.id.editTextContrasena);
-        //buttonIniciarSesion = findViewById(R.id.buttonInicioSesion);
+        // buttonIniciarSesion = findViewById(R.id.buttonInicioSesion);
 
         imageViewStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,28 +50,27 @@ public class LoginActivity extends AppCompatActivity {
                 String nombre = editTextNombre.getText().toString();
                 String contrasena = editTextContrasena.getText().toString();
 
-                // creamos una simulacion de inicio de sesion
+                // create a login simulation
                 if(nombre.isEmpty() && contrasena.isEmpty() ) {
                     Toast.makeText(LoginActivity.this, "Usuario o contraseña incorrecta", Toast.LENGTH_SHORT).show();
 
                 } else {
 
-                    // Abrir MainActivity y pasar nombre de usuario
+                    // Open MainActivity and pass the username
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 
-                    // utilizamos el intent put extra para enviar el nombre al main activity
+                    // use intent putExtra to send the username to MainActivity
                     intent.putExtra("Nombre", nombre);
-
 
                     startActivity(intent);
 
-                    // evitamos que al volver atras nos vuelva al login
+                    // prevent returning to the login screen when pressing back
                     finish();
                 }
 
             }
 
-    });
+        });
 
     }
 

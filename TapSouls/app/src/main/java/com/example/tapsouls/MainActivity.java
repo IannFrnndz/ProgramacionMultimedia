@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
 
     private int incrementoPorClick = 1;
 
-    // asignamos un valor a lo que cuesta mejorar en un inicio
+    // assign an initial value to the improvement cost
     private int costoMejora = 20;
 
-    // cada costo de mejora se va a multiplicar por 4
+    // each improvement cost will be multiplied by 4
     private double multiCosto = 4.0;
     private TextView textView;
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int mejorar;
 
-    private int  contador = 0;
+    private int contador = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,26 +58,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
         });
 
         String nombreUsuario = getIntent().getStringExtra("Nombre");
 
 
-        //variableQueGuardaUnBoton = findViewById(R.id.button);
-        //buttonMejorarVariable = findViewById(R.id.buttonMejorar);
+        // variableQueGuardaUnBoton = findViewById(R.id.button);
+        // buttonMejorarVariable = findViewById(R.id.buttonMejorar);
         loQueCuestaMejorar = findViewById(R.id.textViewMejorar);
-        imageViewCookie= findViewById(R.id.imageViewCookie);
+        imageViewCookie = findViewById(R.id.imageViewCookie);
         imageViewEmerald = findViewById(R.id.imageViewEmerald);
 
         TextView textViewUsuario = findViewById(R.id.textViewUsuario);
 
 
-
-
         textView = findViewById(R.id.textView);
-
-
 
 
         textView.setText("Numero de galletas: " + "0");
@@ -91,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 contador += incrementoPorClick;
-                textView.setText("Numero de galletas: "+ contador);
+                textView.setText("Numero de galletas: " + contador);
 
             }
         });
@@ -103,27 +98,26 @@ public class MainActivity extends AppCompatActivity {
                 if(contador < costoMejora){
                     Toast.makeText(MainActivity.this, "No tienes suficientes galletas. Necesitas: " + costoMejora, Toast.LENGTH_SHORT).show();
                 } else {
-                    // si tiene suficiente restamos el numero de galletas que tiene por lo que cuesta la mejora
+                    // if the player has enough cookies, subtract the upgrade cost
                     contador -= costoMejora;
 
-                    // hacemos que cada click ahora sea el doble
+                    // each click becomes twice as strong
                     incrementoPorClick *= 2;
 
-                    // incrementamos el valor del costo para que no sea tan facil
+                    // increase the improvement cost so it isn’t too easy
                     costoMejora *= multiCosto;
 
 
                     textView.setText("Numero de galletas: " + contador);
-                    // mostramos cuanto se necesita para mejorar
-                    loQueCuestaMejorar.setText("Mejorar cuesta: "+ costoMejora + " galletas");
+                    // show how much is needed for the next improvement
+                    loQueCuestaMejorar.setText("Mejorar cuesta: " + costoMejora + " galletas");
 
-                    // aviso cuando mejoramos para que el usuario sepa que es lo que ha hecho
-                    Toast.makeText(MainActivity.this, " Cada click ahora suma " + incrementoPorClick + ". Próxima mejora: " + costoMejora + " galletas.", Toast.LENGTH_SHORT).show();
+                    // notify the user that the upgrade was successful
+                    Toast.makeText(MainActivity.this, "Cada click ahora da " + incrementoPorClick + ". Proxima mejora: " + costoMejora + " galletas.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
-
 
 
 
