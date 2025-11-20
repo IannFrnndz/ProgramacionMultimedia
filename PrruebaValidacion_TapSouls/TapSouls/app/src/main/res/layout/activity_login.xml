@@ -99,14 +99,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewC" />
 
-    <ImageView
-        android:id="@+id/imageViewStart"
-        android:layout_width="289dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="48dp"
+    <Button
+        android:id="@+id/buttonInicioSesion"
+        android:layout_width="217dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="49dp"
+        android:text="Inicia Sesion"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextContrasena"
-        app:srcCompat="@drawable/button" />
+        android:background="#FF0000"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

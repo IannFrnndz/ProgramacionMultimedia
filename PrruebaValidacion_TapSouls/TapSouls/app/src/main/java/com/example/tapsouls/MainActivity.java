@@ -4,7 +4,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView;
 
     Button buttonMejorarVariable;
-    ImageView imageViewCookie;
-    ImageView imageViewEmerald;
 
     TextView nombreUsuario;
 
@@ -64,11 +61,9 @@ public class MainActivity extends AppCompatActivity {
         String nombreUsuario = getIntent().getStringExtra("Nombre");
 
 
-        //variableQueGuardaUnBoton = findViewById(R.id.button);
-        //buttonMejorarVariable = findViewById(R.id.buttonMejorar);
+        variableQueGuardaUnBoton = findViewById(R.id.button);
+        buttonMejorarVariable = findViewById(R.id.buttonMejorar);
         loQueCuestaMejorar = findViewById(R.id.textViewMejorar);
-        imageViewCookie= findViewById(R.id.imageViewCookie);
-        imageViewEmerald = findViewById(R.id.imageViewEmerald);
 
         TextView textViewUsuario = findViewById(R.id.textViewUsuario);
 
@@ -86,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         textViewUsuario.setText("Jugador: " + nombreUsuario);
 
 
-        imageViewCookie.setOnClickListener(new View.OnClickListener() {
+        variableQueGuardaUnBoton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -97,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        imageViewEmerald.setOnClickListener(new View.OnClickListener() {
+        buttonMejorarVariable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(contador < costoMejora){

@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button buttonMejorarVariable;
     ImageView imageViewCookie;
-    ImageView imageViewEmerald;
 
     TextView nombreUsuario;
 
@@ -56,19 +55,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
 
 
-
-
-
         });
 
         String nombreUsuario = getIntent().getStringExtra("Nombre");
+        String apellido = getIntent().getStringExtra("Apellido");
 
 
         //variableQueGuardaUnBoton = findViewById(R.id.button);
-        //buttonMejorarVariable = findViewById(R.id.buttonMejorar);
+        buttonMejorarVariable = findViewById(R.id.buttonMejorar);
         loQueCuestaMejorar = findViewById(R.id.textViewMejorar);
-        imageViewCookie= findViewById(R.id.imageViewCookie);
-        imageViewEmerald = findViewById(R.id.imageViewEmerald);
+        imageViewCookie = findViewById(R.id.imageViewCookie);
 
         TextView textViewUsuario = findViewById(R.id.textViewUsuario);
 
@@ -83,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         textView.setText("Numero de galletas: " + "0");
         loQueCuestaMejorar.setText("Mejorar cuesta: 20 galletas");
 
-        textViewUsuario.setText("Jugador: " + nombreUsuario);
+        textViewUsuario.setText("Jugador: " + nombreUsuario + "\nApellido: " + apellido);
 
 
         imageViewCookie.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        imageViewEmerald.setOnClickListener(new View.OnClickListener() {
+        buttonMejorarVariable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(contador < costoMejora){

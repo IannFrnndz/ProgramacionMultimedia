@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,8 +19,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText editTextContrasena;
 
     Button buttonIniciarSesion;
-
-    ImageView imageViewStart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +35,11 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
-        imageViewStart = findViewById(R.id.imageViewStart);
         editTextNombre = findViewById(R.id.editTextNombre);
         editTextContrasena = findViewById(R.id.editTextContrasena);
-        //buttonIniciarSesion = findViewById(R.id.buttonInicioSesion);
+        buttonIniciarSesion = findViewById(R.id.buttonInicioSesion);
 
-        imageViewStart.setOnClickListener(new View.OnClickListener() {
+        buttonIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

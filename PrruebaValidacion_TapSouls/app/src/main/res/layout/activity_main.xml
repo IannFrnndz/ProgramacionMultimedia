@@ -5,75 +5,77 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lava"
+    android:background="#21252B"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="244dp"
         android:layout_height="97dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="160dp"
         android:fontFamily="@font/bentham"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMejorar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="#FFA553"
+        android:text="Mejorar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCookie" />
 
     <TextView
         android:id="@+id/textViewMejorar"
         android:layout_width="287dp"
         android:layout_height="71dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="28dp"
         android:fontFamily="@font/bentham"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="27sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMejorar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewCookie" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCookie"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textViewUsuario"
-        android:layout_width="190dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="44dp"
+        android:layout_width="203dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/bentham"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewCookie"
-        android:layout_width="278dp"
-        android:layout_height="188dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="247dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="37dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/minecraftcookie" />
-
-    <ImageView
-        android:id="@+id/imageViewEmerald"
-        android:layout_width="151dp"
-        android:layout_height="159dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewCookie"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/emerald" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

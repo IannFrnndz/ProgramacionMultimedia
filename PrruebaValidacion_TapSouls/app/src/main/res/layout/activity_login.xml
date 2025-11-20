@@ -8,18 +8,49 @@
     android:background="@drawable/b"
     tools:context=".LoginActivity">
 
+    <EditText
+        android:id="@+id/editTextApellido"
+        android:layout_width="295dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="43dp"
+        android:hint="Apellido"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewA" />
+
+    <TextView
+        android:id="@+id/textViewA"
+        android:layout_width="152dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="187dp"
+        android:fontFamily="@font/bentham"
+        android:text="Apellido:"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombre" />
+
     <TextView
         android:id="@+id/textViewBienvenido"
         android:layout_width="260dp"
         android:layout_height="99dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/bentham"
         android:text="Bienvenido a TapSouls"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,7 +58,7 @@
         android:id="@+id/textViewI"
         android:layout_width="187dp"
         android:layout_height="40dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/bentham"
         android:text="Inicia Sesión"
         android:textAlignment="center"
@@ -43,7 +74,7 @@
         android:layout_width="152dp"
         android:layout_height="29dp"
         android:layout_marginStart="73dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="187dp"
         android:fontFamily="@font/bentham"
         android:text="Nombre:"
@@ -59,7 +90,7 @@
         android:layout_width="151dp"
         android:layout_height="29dp"
         android:layout_marginStart="73dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="187dp"
         android:fontFamily="@font/bentham"
         android:text="Contraseña:"
@@ -68,7 +99,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewN" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextApellido" />
 
     <EditText
         android:id="@+id/editTextNombre"
@@ -96,17 +127,18 @@
         android:padding="12dp"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewC" />
 
     <ImageView
         android:id="@+id/imageViewStart"
-        android:layout_width="289dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="221dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="420dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextContrasena"
+        app:layout_constraintTop_toBottomOf="@+id/textViewI"
         app:srcCompat="@drawable/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

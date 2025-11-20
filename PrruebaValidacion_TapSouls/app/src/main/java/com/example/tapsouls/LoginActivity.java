@@ -19,6 +19,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText editTextNombre;
     EditText editTextContrasena;
 
+    EditText editTextApellido;
+
     Button buttonIniciarSesion;
 
     ImageView imageViewStart;
@@ -26,9 +28,11 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        // escondemos la barra superior con el nombre de la actividad
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
@@ -38,10 +42,13 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
-        imageViewStart = findViewById(R.id.imageViewStart);
+        editTextApellido = findViewById(R.id.editTextApellido);
+
         editTextNombre = findViewById(R.id.editTextNombre);
         editTextContrasena = findViewById(R.id.editTextContrasena);
         //buttonIniciarSesion = findViewById(R.id.buttonInicioSesion);
+
+        imageViewStart = findViewById(R.id.imageViewStart);
 
         imageViewStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,10 +56,11 @@ public class LoginActivity extends AppCompatActivity {
 
                 String nombre = editTextNombre.getText().toString();
                 String contrasena = editTextContrasena.getText().toString();
+                String apellido = editTextApellido.getText().toString();
 
                 // creamos una simulacion de inicio de sesion
-                if(nombre.isEmpty() && contrasena.isEmpty() ) {
-                    Toast.makeText(LoginActivity.this, "Usuario o contraseña incorrecta", Toast.LENGTH_SHORT).show();
+                if(nombre.isEmpty() && contrasena.isEmpty() && apellido.isEmpty() ) {
+                    Toast.makeText(LoginActivity.this, "Usuario, apellido o contraseña incorrecta", Toast.LENGTH_SHORT).show();
 
                 } else {
 
@@ -61,6 +69,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     // utilizamos el intent put extra para enviar el nombre al main activity
                     intent.putExtra("Nombre", nombre);
+                    intent.putExtra("Apellido", apellido);
 
 
                     startActivity(intent);
