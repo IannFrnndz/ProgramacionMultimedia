@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calculadora_Ian">
         <activity
-            android:name=".MainActivity"
+            android:name=".Ejemplo_clase"
             android:exported="false">
 
         </activity>
 
 
         <activity
-            android:name=".Ejemplo_clase"
+            android:name=".MainActivity"
             android:exported="true">
 
             <intent-filter>
