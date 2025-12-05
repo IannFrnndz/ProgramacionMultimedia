@@ -39,6 +39,27 @@ public class MainActivity extends AppCompatActivity {
 
     private int contador = 0;
 
+    // level simulator in order to change the upgrading  picture
+    private int nivel = 1;
+    public void cambiarImagenDeMejora() {
+
+        if (nivel >= 1 && nivel <= 3) {
+            imageViewEmerald.setImageResource(R.drawable.coal);
+
+        } else if (nivel >= 4 && nivel <= 6) {
+            imageViewEmerald.setImageResource(R.drawable.iron);
+
+        } else if (nivel >= 7 && nivel <= 9) {
+            imageViewEmerald.setImageResource(R.drawable.gold);
+
+        } else {
+            imageViewEmerald.setImageResource(R.drawable.diamond);
+        }
+    }
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -54,9 +75,6 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
-
-
 
         });
 
@@ -92,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+
         imageViewEmerald.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,13 +127,21 @@ public class MainActivity extends AppCompatActivity {
                     // increase the improvement cost so it isn’t too easy
                     costoMejora *= multiCosto;
 
+                    nivel++;  // We upgrade the level
+
+                    // verify whether we have to change the picture
+                    cambiarImagenDeMejora();
 
                     textView.setText("Numero de galletas: " + contador);
                     // show how much is needed for the next improvement
                     loQueCuestaMejorar.setText("Mejorar cuesta: " + costoMejora + " galletas");
 
                     // notify the user that the upgrade was successful
-                    Toast.makeText(MainActivity.this, "Cada click ahora da " + incrementoPorClick + ". Proxima mejora: " + costoMejora + " galletas.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "NIVEL: "+ nivel + " Cada click ahora da " + incrementoPorClick + ". Proxima mejora: " + costoMejora + " galletas.", Toast.LENGTH_SHORT).show();
+
+
+
+
                 }
             }
         });
